@@ -9,7 +9,6 @@ echo --- Enter a number to choose a file to play---
 echo ===============================================
 # Displays a list of files in current directory and prompt for which
 # file to play
-fileList=$(find . -maxdepth 10 -type f | sort | grep -i '\.avi$\|\.mp4$\|\.mkv$\|\.mpg$\|\.mpeg$\|\.flv$')
 
 # Set the prompt for the select command
 PS3="Enter a number or 'q' to quit: "
@@ -18,7 +17,7 @@ OLD_IFS=${IFS}; #ifs space seperator
 IFS=$'\t\n' #change ifs seperator from spaces to new line, dont mangle file names
 
 # Create a list of files to display
-fileList=$(find . -maxdepth 10 -type f | sort)
+fileList=$(find . -maxdepth 10 -type f | sort | grep -i '\.avi$\|\.mp4$\|\.mkv$\|\.mpg$\|\.mpeg$\|\.flv$')
 
 # Show a menu and ask for input. If the user entered a valid choice,
 # then invoke the program on that file
