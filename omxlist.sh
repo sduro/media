@@ -23,6 +23,7 @@ fileList=$(find . -maxdepth 10 -type f | sort | grep -i '\.avi$\|\.mp4$\|\.mkv$\
 # then invoke the program on that file
 select fileName in $fileList; do
         if [ -n "$fileName" ]; then
+                #omxplayer -o hdmi ${fileName} #para sacar HDMI
                 omxplayer --win "00 105 1280 620" ${fileName}
         fi
 IFS=${OLD_IFS}
