@@ -1,0 +1,17 @@
+#script que sube un fichero a un servidor ftp
+#recibe los siguientes argumentos
+#$1 Fichero a subir
+#$2 servidor FTP
+#$3 Nombre de usuario
+#$4 Password
+#$5 Directorio destino
+
+ftp << FIN
+open $1
+$2
+$3
+cd $4
+binary
+put $5
+quit
+FIN
