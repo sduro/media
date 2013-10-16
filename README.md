@@ -12,8 +12,9 @@ Es hace la misma función que el anterior pero para la distro de CentOS
 
 ftpconnect.sh
 ========
-script que sube un fichero a un servidor ftp\n
-recibe los siguientes argumentos\n
+script que sube un fichero a un servidor ftp
+recibe los siguientes argumentos
+
 $1 Fichero a subir\n
 $2 servidor FTP
 $3 Nombre de usuario
