@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change directory to where your media is
-cd /home/pi/usb/torrent/completed
+cd /home/pi/usb/share/movies
 
 # Show instructions to play choosen media
 echo ===============================================
