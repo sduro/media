@@ -1,6 +1,6 @@
-omx
+Media
 ===
-Script para buscar y ejecutar ficheros mulitmedia usando el movil.
+Script para buscar y ejecutar ficheros multimedia usando el movil.
 
 omxlist.sh
 ==========
