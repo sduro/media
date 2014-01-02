@@ -14,7 +14,7 @@ echo ===============================================
 PS3="Enter a number or 'q' to quit: "
 
 OLD_IFS=${IFS}; #ifs space seperator
-IFS=$'\t\n' #change ifs seperator from spaces to new line, dont mangle file names
+IFS=$'\t\n' #cambio de IFS para no romper el bucle con los espacios.
 
 # Create a list of files to display // Crea una lista de los elementos que se pueden reproducir
 fileList=$(find . -maxdepth 10 -type f | sort | grep -i '\.avi$\|\.mp4$\|\.mkv$\|\.mpg$\|\.mpeg$\|\.flv$')
