@@ -13,3 +13,4 @@ for file in $filelist; do
 	echo $file $distancia
 done
 
+#update 10/09/2014
