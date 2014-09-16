@@ -10,3 +10,7 @@ info_fotos.sh
 Muestra la informacion de la distancia focal de los ficheros de imagenes obteniendola de exif. Es necesario tener instalado el repositorio exif. Como instalarlo:
 sudo apt-get install exif
 
+exif.py
+=======
+Programa en python para obtener la informacion exif de los ficheros multimedia.
+

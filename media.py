@@ -11,7 +11,7 @@ except ImportError:
     from configparser import ConfigParser
 
 config = ConfigParser()
-config.read("config.cfg")
+config.read("config/config.cfg")
 
 # Cantidad de secciones
 sections = config.sections() 
