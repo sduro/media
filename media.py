@@ -9,16 +9,20 @@
 ############################################
 import shutil
 import os
-
+import string
+from __builtin__ import str
 try:
     from ConfigParser import ConfigParser
 except ImportError:
     from configparser import ConfigParser
 
-def move_files():
-    origen = os.listdir("/path/to/origen/")
+def move_files(path_origen):
+    print "Dentro del movimiento"
+    print   path_origen
+    origen = os.listdir((path_origen))
     for fichero in origen:
-        shutil.move(fichero,destino):
+        print fichero #lista todos los ficheros del directorio
+        #shutil.move(fichero,destino)
 
 def main():
     config = ConfigParser()
@@ -36,7 +40,11 @@ def main():
         print("\n[%s]" % section)
         for item in config.items(section):
             print(item[0], ":", item[1])
-            # Modificamos el tema principal
+            if(item[0] == "path_origen"):
+                print (">>>",item[1],"<<<")
+                move_files(str(item[1]).replace('"', '')) #Elimina las comillas del path
+                
+                # Modificamos el tema principal
             config.set("general", "temas", themes_count + 1)
     # Agregamos un nuevo tema (sección)
     #config.add_section("TEMA3")
@@ -47,3 +55,5 @@ def main():
     with open("config.cfg", "w") as f:
         config.write(f)
     
+if __name__=='__main__':
+    main()
