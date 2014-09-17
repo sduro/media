@@ -1,0 +1,2 @@
+-rw-rw-r-- 1 sduro sduro  189 sep 16 16:22 config.cfg
+-rw-rw-r-- 1 sduro sduro 1084 sep 16 10:05 medialist.sh

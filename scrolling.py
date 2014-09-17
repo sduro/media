@@ -70,24 +70,15 @@ class MenuDemo:
     def displayScreen(self):
         # clear screen
         self.screen.erase()
-
         # now paint the rows
         top = self.topLineNum
         bottom = self.topLineNum+curses.LINES
-<<<<<<< HEAD
         archi=open('selectlines.txt','w') #file to save the select lines
-=======
-        archi=open('selectlines.txt','w')
->>>>>>> c30a5eb30fdf891bd234ec229246f7549efbac6a
         for (index,line,) in enumerate(self.outputLines[top:bottom]):
             linenum = self.topLineNum + index
             if linenum in self.markedLineNums:
                 prefix = self.PREFIX_SELECTED
-<<<<<<< HEAD
                 archi.write(line+'\n')#add lines with next line
-=======
-                archi.write(line+'\n')
->>>>>>> c30a5eb30fdf891bd234ec229246f7549efbac6a
             else:
                 prefix = self.PREFIX_DESELECTED
 
@@ -128,7 +119,6 @@ class MenuDemo:
     # catch any weird termination situations
     def __del__(self):
         self.restoreScreen()
-
      
 if __name__ == '__main__':
     ih = MenuDemo()
