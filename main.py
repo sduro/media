@@ -3,7 +3,7 @@ import sqlite3
 
 def read_local_files():
     fitxer=[]
-    with open('/home/sduro/Documentos/llista.txt') as f:
+    with open('/home/user/Documentos/llista.txt') as f:
         for line in f:
             fitxer.append(line[0:-1])
             #print (line[0:-1])
